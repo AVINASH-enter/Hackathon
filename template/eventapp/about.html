@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        .about-section {
+            background-color: #007bff;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .about-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 18px;
+        }
+        .team {
+            padding: 50px 0;
+        }
+        .team .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            text-align: center;
+            padding: 30px;
+        }
+        .team img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .team h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .team p {
+            font-size: 16px;
+            color: #666;
+        }
+        .team .role {
+            font-size: 14px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- About Section -->
+<div class="about-section">
+    <h1>About Us</h1>
+    <p>Welcome to our Event Registration website !!</p>
+</div>
+
+<!-- Team Section -->
+<div class="container team">
+    <div class="row">
+        <!-- Team Lead -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/Avinash.jpg' %}" alt="Team Lead">
+                <h2>KANTU AVINASH</h2>
+                <p class="role">Team Lead</p>
+            </div>
+        </div>
+
+        <!-- Code Designer -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/Srikanth.jpg' %}" alt="Designer">
+                <h2>CHANDRAKAVI SRIKANTH</h2>
+                <p class="role">Code Designer</p>
+            </div>
+        </div>
+
+        <!-- Researcher -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/Sandeep.jpg' %}" alt="Researcher">
+                <h2>SANDEEP BYSANI</h2>
+                <p class="role">Researcher</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- More Team Members can be added similarly -->
+
+</body>
+</html>
+
+{% endblock %}

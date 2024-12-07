@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking Successful
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>Booking Successful!</h1>
+    <h2>Your Booking Details</h2>
+    <p><strong>Customer Name:</strong> {{ booking.cus_name }}</p>
+    <p><strong>Customer Phone:</strong> {{ booking.cus_ph }}</p>
+    <p><strong>Event Name:</strong> {{ booking.name.name }}</p> <!-- Accessing related Event name -->
+    <p><strong>Booking Date:</strong> {{ booking.booking_date }}</p>
+    <p><strong>Booked On:</strong> {{ booking.booked_on }}</p>
+<a href="/events?event_name=event" class="events-btn">Book Another Event</a>
+</div>
+{% endblock %}
